@@ -42,15 +42,15 @@ const Hero = () => {
           className="text-lg md:text-xl lg:text-2xl text-white font-medium leading-relaxed text-center w-full"
           words="I am a passionate Full Stack Developer specializing in building exceptional digital experiences. Transforming ideas into elegant solutions through clean code and intuitive design."
         />
-        <div className="flex justify-center w-full">
-          <a href="#connect">
+        <a href="#projects">
+          <div className="flex justify-center w-full">
             <MagicButton
               title="Show my work"
               icon={<FaCopy />}
               position="right"
             />
-          </a>
-        </div>
+          </div>
+        </a>
       </div>
     </div>
   );

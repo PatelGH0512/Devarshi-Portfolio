@@ -207,7 +207,7 @@ MobileNavMenuProps) => {
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.2 }}
           className={cn(
-            "absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-2xl bg-white/95 backdrop-blur-lg px-6 py-8 shadow-lg border border-zinc-200/20 dark:bg-zinc-900/95 dark:border-zinc-800/30",
+            "absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-2xl bg-transparent backdrop-blur-lg px-6 py-8  border border-zinc-700 dark:bg-black/80 dark:border-zinc-500",
             className
           )}
         >

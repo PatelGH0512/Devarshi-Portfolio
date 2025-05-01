@@ -13,7 +13,7 @@ export function GlowingEffectDemo() {
     },
     {
       id: 2,
-      title: "BlinkIt",
+      title: "Quickmart",
       des: "A Full stack Ecommerce grocery selling platform",
       iconLists: ["/html.svg", "/css.svg", "/javascript.svg", "/tail.svg"],
       link: "https://example.com/project3",
@@ -27,7 +27,7 @@ export function GlowingEffectDemo() {
     },
     {
       id: 4,
-      title: "Inventory Mangment using AWS Services",
+      title: "InventSync",
       des: "Full Stack Inventory Mangment using AWS Service",
       iconLists: ["/next.svg", "/node.svg", "/redux.svg", "/aws.svg"],
       link: "https://example.com/project6",

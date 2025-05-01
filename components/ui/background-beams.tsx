@@ -5,7 +5,7 @@ import { cn } from "@/utils/utils";
 export function BackgroundBeamsDemo() {
   return (
     <div className="h-full w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center">
-      <h1 className="relative z-10 text-4xl md:text-3xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
+      <h1 className="relative z-10 text-2xl md:text-xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
         Always Leveling up!
       </h1>
       <p className="text-neutral-400 max-w-lg mx-3 my-2  text-xl text-center relative z-10">

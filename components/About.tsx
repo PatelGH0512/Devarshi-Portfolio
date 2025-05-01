@@ -28,23 +28,16 @@ const About = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-0 rounded-2xl" />
 
           {/* Text moved to bottom-left and slightly away from center */}
-          <div className="absolute bottom-6 left-6 z-10  p-1 sm:p-6 rounded-xl max-w-lg">
+          <div className="absolute bottom-6 left-6 z-10  p-1 sm:p-6 rounded-xl overflow-auto max-w-lg">
             <h3 className="text-gray-200 text-sm font-semibold tracking-widest uppercase">
               Full-Stack Developer
             </h3>
             <h2 className="text-white text-3xl font-bold mb-2">About Me</h2>
             <p className="text-gray-100 text-base font-light leading-relaxed text-justify">
               I’m an innovative full-stack developer with a passion for crafting
-              scalable, high-performance applications from the ground up. I
-              specialize in clean code architecture and frictionless UX.
-              Proficient in
-              <span className="font-semibold">
-                {" "}
-                C/C++, Python, Java, JavaScript
-              </span>
-              , experienced with
-              <span className="font-semibold"> AWS</span> and
-              <span className="font-semibold"> Google Cloud</span>.
+              scalable, high-performance applications from the ground up. I love
+              to dive into projects and implement ltest features into it it
+              honing my skills as a developer and student.
             </p>
           </div>
         </div>

@@ -35,13 +35,18 @@ export default function Home() {
                 Checkout my resume <PiReadCvLogoFill size={"24px"} />
               </p>
               <div className="!pointer-events-auto">
-                <button className="p-[3px] relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-                  <div className="text-lg px-8 py-2 flex gap-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
-                    Download{" "}
-                    <PiReadCvLogoDuotone className="mt-1" size={"20px"} />
-                  </div>
-                </button>
+                <a
+                  href="public/DevarshiAPatel_ResumeSDE.pdf"
+                  download={"Devarshi's resume"}
+                >
+                  <button className="p-[3px] relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+                    <div className="text-lg px-8 py-2 flex gap-2 bg-black rounded-[6px] relative group transition duration-200 text-white hover:bg-transparent">
+                      Download{" "}
+                      <PiReadCvLogoDuotone className="mt-1" size={"20px"} />
+                    </div>
+                  </button>
+                </a>
               </div>
             </div>
           </BackgroundGradientAnimation>
