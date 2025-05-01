@@ -65,7 +65,7 @@ const Footer = () => {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         <div className="flex flex-col items-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400 mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-500 mb-6">
             Let&apos;s Create Together
           </h2>
           <p className="text-white/70 text-center max-w-2xl mb-10 text-lg">

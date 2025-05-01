@@ -1,12 +1,10 @@
 "use client";
-import { GrMail } from "react-icons/gr";
 import {
   Navbar,
   NavBody,
   NavItems,
   MobileNav,
   NavbarLogo,
-  NavbarButton,
   MobileNavHeader,
   MobileNavToggle,
   MobileNavMenu,
@@ -92,25 +90,11 @@ export function NavbarDemo() {
                 key={`mobile-link-${idx}`}
                 href={item.link}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-neutral-600 dark:text-neutral-300"
+                className="relative text-neutral-600 dark:text-neutral-300 hover:text-purple-500 transition-colors duration-500"
               >
                 <span className="block">{item.name}</span>
               </a>
             ))}
-            <div className="flex w-full flex-col gap-4 items-center justify-center">
-              <NavbarButton
-                onClick={() => {
-                  //scrollToContact();
-                  setIsMobileMenuOpen(false);
-                }}
-                variant="primary"
-                className="w-full"
-              >
-                <div className="gap-1 flex text-md">
-                  Send A Mail <GrMail size={20} />
-                </div>
-              </NavbarButton>
-            </div>
           </MobileNavMenu>
         </MobileNav>
       </Navbar>
