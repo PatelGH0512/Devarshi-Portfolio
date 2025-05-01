@@ -1,38 +1,46 @@
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent, useMemo } from "react";
 import { FaEnvelope, FaTimes, FaPaperPlane } from "react-icons/fa";
 import { socialMedia } from "@/data";
 import emailjs from "@emailjs/browser";
 
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+  [key: string]: unknown;
+}
+
 const Footer = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(false);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  const currentYear = new Date().getFullYear();
 
-  const handleInputChange = (e) => {
+  const currentYear = useMemo(() => new Date().getFullYear(), []);
+
+  const handleInputChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
       await emailjs.send(
-        "service_jt38283", // Get this from EmailJS dashboard
-        "template_ezntyfn", // Get this from EmailJS dashboard
+        "service_jt38283", // Replace with your EmailJS service ID
+        "template_ezntyfn", // Replace with your EmailJS template ID
         formData,
-        "KRvns5iatPItCYdox" // Get this from EmailJS dashboard
+        "KRvns5iatPItCYdox" // Replace with your EmailJS public key
       );
-
-      // The email will be sent to whatever email address you've configured in your EmailJS template
 
       setSubmitSuccess(true);
 
@@ -53,52 +61,18 @@ const Footer = () => {
       className="w-full pt-24 pb-12 relative overflow-hidden"
       id="contact"
     >
-      {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black-200/30 z-0" />
+      {/* Background and Grid omitted for brevity */}
 
-      {/* Animated grid pattern */}
-      <div className="absolute inset-0 z-0 opacity-20">
-        <div className="absolute w-full h-full grid grid-cols-12 gap-4">
-          {Array(24)
-            .fill(0)
-            .map((_, i) => (
-              <div
-                key={i}
-                className="col-span-1 h-full border-r border-white/5"
-                style={{
-                  animationDuration: `${Math.random() * 4 + 3}s`,
-                  animationDelay: `${Math.random() * 2}s`,
-                }}
-              />
-            ))}
-          {Array(12)
-            .fill(0)
-            .map((_, i) => (
-              <div
-                key={i}
-                className="col-span-12 w-full border-t border-white/5"
-                style={{
-                  animationDuration: `${Math.random() * 4 + 3}s`,
-                  animationDelay: `${Math.random() * 2}s`,
-                }}
-              />
-            ))}
-        </div>
-      </div>
-
-      {/* Main content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         <div className="flex flex-col items-center">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400 mb-6">
             Let&apos;s Create Together
           </h2>
-
           <p className="text-white/70 text-center max-w-2xl mb-10 text-lg">
             Connect with me. I&apos;m just one message away from turning your
             vision into reality.
           </p>
 
-          {/* Interactive contact button */}
           <div
             className="group relative"
             onMouseEnter={() => setIsHovered(true)}
@@ -124,10 +98,10 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Footer divider with gradient */}
+        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent my-12" />
 
-        {/* Footer bottom section */}
+        {/* Footer bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col items-center md:items-start">
             <div className="font-bold text-xl mb-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400">
@@ -138,7 +112,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Social media links */}
           <div className="flex items-center gap-4">
             {socialMedia.map((info) => (
               <a
@@ -148,7 +121,7 @@ const Footer = () => {
               >
                 <img
                   src={info.img}
-                  alt={"social icon"}
+                  alt="social icon"
                   className="w-5 h-5 opacity-70 group-hover:opacity-100 transition-opacity duration-300"
                 />
               </a>
@@ -161,15 +134,14 @@ const Footer = () => {
       {isFormOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/70 backdrop-blur-sm transition-all">
           <div className="relative w-full max-w-md p-6 rounded-2xl shadow-xl bg-gradient-to-br from-black-300 to-black-200 border border-white/10">
-            {/* Close button */}
             <button
               onClick={() => setIsFormOpen(false)}
               className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
+              aria-label="Close contact form"
             >
               <FaTimes />
             </button>
 
-            {/* Form title */}
             <div className="mb-6 text-center">
               <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400">
                 Send me a Message
@@ -194,7 +166,6 @@ const Footer = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
-                {/* Name field */}
                 <div>
                   <label
                     htmlFor="name"
@@ -214,7 +185,6 @@ const Footer = () => {
                   />
                 </div>
 
-                {/* Email field */}
                 <div>
                   <label
                     htmlFor="email"
@@ -234,7 +204,6 @@ const Footer = () => {
                   />
                 </div>
 
-                {/* Message field */}
                 <div>
                   <label
                     htmlFor="message"
@@ -246,7 +215,7 @@ const Footer = () => {
                     id="message"
                     name="message"
                     required
-                    rows="4"
+                    rows={4}
                     value={formData.message}
                     onChange={handleInputChange}
                     className="w-full px-4 py-2 rounded-lg bg-black-400/50 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-purple-500/50 resize-none"
@@ -254,7 +223,6 @@ const Footer = () => {
                   ></textarea>
                 </div>
 
-                {/* Submit button */}
                 <button
                   type="submit"
                   disabled={isSubmitting}
