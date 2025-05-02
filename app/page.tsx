@@ -36,7 +36,7 @@ export default function Home() {
               </p>
               <div className="!pointer-events-auto">
                 <a
-                  href="public/DevarshiAPatel_ResumeSDE.pdf"
+                  href="/Users/patelmac05/Desktop/portfolio/public/DevarshiAPatel_ResumeSDE.pdf"
                   download={"Devarshi's resume"}
                 >
                   <button className="p-[3px] relative">
