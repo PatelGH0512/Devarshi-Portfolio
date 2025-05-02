@@ -36,8 +36,10 @@ export default function Home() {
               </p>
               <div className="!pointer-events-auto">
                 <a
-                  href="/Users/patelmac05/Desktop/portfolio/public/DevarshiAPatel_ResumeSDE.pdf"
-                  download={"Devarshi's resume"}
+                  href="/DevarshiAPatel_ResumeSDE.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download={"Devarshi's Resume"}
                 >
                   <button className="p-[3px] relative">
                     <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
