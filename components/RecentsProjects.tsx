@@ -36,7 +36,7 @@ export function GlowingEffectDemo() {
       id: 5,
       title: "Dieseas Detection using xRAY  ",
       des: "Created a Convolutional Neural Network which will be able to detect and classify human diseases (i.e. Pneumonia, Covid-19, Tuberculosis) from chest x-ray images. Also make use of different layers and other hyperparameters for building, training and testing this classification model by using tensorflow and keras for this project.",
-      iconLists: ["python.svg", "/numpy.svg", "/keras.svg", "/tensorflow.svg"],
+      iconLists: ["python.svg", "/numpy.svg", "/tensorflow.svg"],
       link: "https://blogs.gwu.edu/patel-patel/2024/03/28/diseases-detection-using-x-ray-images/",
     },
     {
