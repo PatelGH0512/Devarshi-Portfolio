@@ -9,9 +9,36 @@ import About from "@/components/About";
 import MyTechstack from "@/components/MyTechstack";
 import { NavbarDemo } from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useEffect, useState } from "react";
+import { useWindowScroll } from "react-use";
+import { FiChevronUp } from "react-icons/fi";
 export default function Home() {
+  const [showScroll, setShowScroll] = useState(false);
+  const { y } = useWindowScroll();
+  useEffect(() => {
+    if (y > 300) {
+      setShowScroll(true);
+    } else {
+      setShowScroll(false);
+    }
+  }, [y]);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <main className="relative bg-black flex flex-col items-center justify-center overflow-hidden">
+      {/* Scroll to Top Button */}
+      {showScroll && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 bg-black-400 backdrop-blur-md border border-white/10 transition-all duration-300 hover:border-purple-500/50 hover:bg-black-200 hover:scale-110 text-white rounded-full p-3 shadow-lg hover:shadow-xl z-50"
+          aria-label="Scroll to top"
+        >
+          <FiChevronUp size={24} />
+        </button>
+      )}
       {/* Main Content Wrapper */}
       <div className="max-w-7xl w-full px-0 py-5 gap-2">
         <NavbarDemo></NavbarDemo>

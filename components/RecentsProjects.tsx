@@ -6,45 +6,45 @@ export function GlowingEffectDemo() {
   const projects = [
     {
       id: 1,
-      title: "People's Bank",
-      des: "People's Bank is a modern and secure digital banking platform for everyone. It supports bank account linking via Plaid, real-time updates, and fund transfers with Dwolla. Users can track balances, view transactions, and manage accounts—all through a clean, responsive interface built for scalability and ease of use.",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/fm.svg"],
-      link: "https://example.com/project1",
+      title: "InventSync",
+      des: "Full Stack Inventory Mangment using AWS Service",
+      iconLists: ["/next.svg", "/node.svg", "/redux.svg", "/aws.svg"],
+      link: "https://github.com/PatelGH0512/inventSync",
     },
     {
       id: 2,
       title: "Quickmart",
       des: "A Full stack Ecommerce grocery selling platform",
       iconLists: ["/html.svg", "/css.svg", "/javascript.svg", "/tail.svg"],
-      link: "https://example.com/project3",
+      link: "https://github.com/PatelGH0512/quickmart",
     },
     {
       id: 3,
-      title: "CineScope",
-      des: "CineScope is a sleek, mobile-first movie discovery app built with Expo, React Native, TypeScript, and Tailwind CSS. It lets users search for trending and popular films in real-time, using a custom popularity algorithm powered by Appwrite. With a clean UI and responsive design, CineScope delivers a seamless experience for movie lovers on the go.",
-      iconLists: ["/re.svg", "/next.svg", "/tail.svg", "/ts.svg"],
-      link: "https://example.com/project4",
-    },
-    {
-      id: 4,
-      title: "InventSync",
-      des: "Full Stack Inventory Mangment using AWS Service",
-      iconLists: ["/next.svg", "/node.svg", "/redux.svg", "/aws.svg"],
-      link: "https://example.com/project6",
-    },
-    {
-      id: 5,
       title: "Budgetwise",
       des: "Budgetwise is a money management app which allows users to split income into customizable categories of need, expenses and savings.",
       iconLists: ["dart.svg", "python.svg"],
-      link: "https://example.com/project2",
+      link: "https://github.com/PatelGH0512/Dart-Project",
+    },
+    {
+      id: 4,
+      title: "Uber Clone",
+      des: "Built a cross-platform mobile app (Uber Clone) featuring real-time location tracking with Google Maps, Expo’s latest features and lightning-fast edge-ready Postgres database in React Native.",
+      iconLists: ["/re.svg", "/expo.svg", "/PostgresSQL.svg", "/google.svg"],
+      link: "https://github.com/PatelGH0512/uber-clone",
+    },
+    {
+      id: 5,
+      title: "Dieseas Detection using xRAY  ",
+      des: "Created a Convolutional Neural Network which will be able to detect and classify human diseases (i.e. Pneumonia, Covid-19, Tuberculosis) from chest x-ray images. Also make use of different layers and other hyperparameters for building, training and testing this classification model by using tensorflow and keras for this project.",
+      iconLists: ["python.svg", "/numpy.svg", "/keras.svg", "/tensorflow.svg"],
+      link: "https://blogs.gwu.edu/patel-patel/2024/03/28/diseases-detection-using-x-ray-images/",
     },
     {
       id: 6,
       title: "Devarshi's Portfolio",
       des: "Full Stack Portfolio using Acetenity UI components",
       iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/fm.svg"],
-      link: "https://example.com/project5",
+      link: "https://github.com/PatelGH0512/Devarshi-Portfolio",
     },
   ];
 
@@ -74,7 +74,7 @@ interface GridItemProps {
   className: string;
 }
 
-const GridItem = ({ title, description, className, icon }: GridItemProps) => {
+const GridItem = ({ title, description, className, icon,link }: GridItemProps) => {
   const iconLists = Array.isArray(icon) ? icon : [];
   return (
     <li className={`list-none ${className} group`}>
@@ -130,10 +130,12 @@ const GridItem = ({ title, description, className, icon }: GridItemProps) => {
               {/* CTA Section */}
               <div className="mt-4 opacity-60 group-hover:opacity-100 transition-all duration-300">
                 <div className="flex justify-end mt-4">
-                  <button className="px-4 py-2 rounded-lg flex items-center group-hover:bg-purple-900/30 transition-all duration-300">
-                    View Project
-                    <FaLocationArrow className="ml-2" color="#CBACF9" />
-                  </button>
+                  <a href={link}>
+                    <button className="px-4 py-2 rounded-lg flex items-center group-hover:bg-purple-900/30 transition-all duration-300">
+                      View Project
+                      <FaLocationArrow className="ml-2" color="#CBACF9" />
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>

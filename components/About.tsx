@@ -36,7 +36,7 @@ const About = () => {
             <p className="text-gray-100 text-base font-light leading-relaxed text-justify">
               I’m an innovative full-stack developer with a passion for crafting
               scalable, high-performance applications from the ground up. I love
-              to dive into projects and implement ltest features into it it
+              diving into projects and implementing the latest features into it,
               honing my skills as a developer and student.
             </p>
           </div>

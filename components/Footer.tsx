@@ -69,8 +69,7 @@ const Footer = () => {
             Let&apos;s Create Together
           </h2>
           <p className="text-white/70 text-center max-w-2xl mb-10 text-lg">
-            Connect with me. I&apos;m just one message away from turning your
-            vision into reality.
+            Connect with me. I&apos;m just one message away whether if it is regarding a job opportunity or just a casual conversation.
           </p>
 
           <div
@@ -117,7 +116,7 @@ const Footer = () => {
               <a
                 key={info.id}
                 href={info.link}
-                className="group w-10 h-10 flex justify-center items-center rounded-lg bg-black-300/10 backdrop-blur-md border border-white/10 transition-all duration-300 hover:border-purple-500/50 hover:bg-black-200 hover:scale-110"
+                className="group w-10 h-10 flex justify-center items-center rounded-lg bg-purple-500/10 backdrop-blur-md border border-white/10 transition-all duration-300 hover:border-purple-500/50 hover:bg-black-200 hover:scale-110"
               >
                 <img
                   src={info.img}
@@ -160,8 +159,8 @@ const Footer = () => {
                   Message Sent!
                 </h4>
                 <p className="text-white/60 text-center">
-                  Thanks for reaching out. I&apos;ll respond to your message as
-                  soon as possible.
+                  Thank you for reaching out. I&apos;ll respond to your message
+                  as soon as possible.
                 </p>
               </div>
             ) : (
