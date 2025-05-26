@@ -188,7 +188,7 @@ export const socialMedia = [
   },
   {
     id: 2,
-    img: "/twit.svg",
+    img: "/x.svg",
     link: "https://x.com/Patelyrrrrr",
   },
   {
