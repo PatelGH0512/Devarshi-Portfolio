@@ -6,31 +6,31 @@ export function GlowingEffectDemo() {
   const projects = [
     {
       id: 1,
+      title: "ProjectFlow",
+      des: "A modern project management platform designed for teams to plan, track, and deliver work efficiently.",
+      iconLists: ["/next.svg", "/tail.svg", "/redux.svg", "/aws.svg"],
+      link: "https://github.com/PatelGH0512/projectflow",
+    },
+    {
+      id: 2,
       title: "InventSync",
       des: "Full Stack Inventory Mangment using AWS Service",
       iconLists: ["/next.svg", "/node.svg", "/redux.svg", "/aws.svg"],
       link: "https://github.com/PatelGH0512/inventSync",
     },
     {
-      id: 2,
+      id: 3,
       title: "Quickmart",
       des: "A Full stack Ecommerce grocery selling platform",
       iconLists: ["/html.svg", "/css.svg", "/javascript.svg", "/tail.svg"],
       link: "https://github.com/PatelGH0512/quickmart",
     },
     {
-      id: 3,
+      id: 4,
       title: "Budgetwise",
       des: "Budgetwise is a money management app which allows users to split income into customizable categories of need, expenses and savings.",
       iconLists: ["dart.svg", "python.svg"],
       link: "https://github.com/PatelGH0512/Dart-Project",
-    },
-    {
-      id: 4,
-      title: "Uber Clone",
-      des: "Built a cross-platform mobile app (Uber Clone) featuring real-time location tracking with Google Maps, Expo’s latest features and lightning-fast edge-ready Postgres database in React Native.",
-      iconLists: ["/re.svg", "/expo.svg", "/PostgresSQL.svg", "/google.svg"],
-      link: "https://github.com/PatelGH0512/uber-clone",
     },
     {
       id: 5,
@@ -74,7 +74,13 @@ interface GridItemProps {
   className: string;
 }
 
-const GridItem = ({ title, description, className, icon,link }: GridItemProps) => {
+const GridItem = ({
+  title,
+  description,
+  className,
+  icon,
+  link,
+}: GridItemProps) => {
   const iconLists = Array.isArray(icon) ? icon : [];
   return (
     <li className={`list-none ${className} group`}>
