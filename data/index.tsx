@@ -34,6 +34,49 @@ export const gridItems = [
 export function TimelineDemo() {
   const data = [
     {
+      title: "July'25 - Present",
+      content: (
+        <div>
+          <div className="flex items-center gap-3 mb-2">
+            <Image
+              src="/torus.jpeg"
+              alt="torus Logo"
+              width={40}
+              height={40}
+              className="rounded-full"
+            />
+            <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-semibold">
+              Torus Transforms - Portland, Oregon
+            </p>
+          </div>
+          <p className="text-neutral-600 dark:text-neutral-400 text-xs md:text-sm mb-2">
+            Mobile Application Developer
+          </p>
+          <ul className="text-neutral-600 dark:text-neutral-400 text-xs md:text-sm list-disc list-inside space-y-2 leading-relaxed">
+            <li>
+              Developed and optimized cross-platform mobile app features using
+              React Native, TypeScript, JavaScript, and Firebase to ensure high
+              performance and scalability, improving load times by an estimated
+              20%.
+            </li>
+            <li>
+              Debugged, tested, and troubleshot code using Android Studio
+              profiling tools, enhancing app stability and user experience.
+            </li>
+            <li>
+              Collaborated with UI/UX designers and developers in agile sprints,
+              ensuring design consistency and meeting project milestones.
+            </li>
+            <li>
+              Integrated front-end components with backend services via FireCMS
+              and Firebase for real-time data management and improving seamless
+              user interactions speed by 25%.
+            </li>
+          </ul>
+        </div>
+      ),
+    },
+    {
       title: "September'22 - June'23",
       content: (
         <div>
@@ -54,12 +97,15 @@ export function TimelineDemo() {
           </p>
           <ul className="text-neutral-600 dark:text-neutral-400 text-xs md:text-sm list-disc list-inside space-y-2 leading-relaxed">
             <li>
-              Developed scalable web applications using React Native
-              (TypeScript) to enhance efficiency and maintainability.
+              Collaborated within a cross-functional Agile team to build and
+              maintain SPAs using React Native and Node.js, driving 20%
+              improvement in user onboarding speed.
             </li>
             <li>
-              Designed and implemented serverless microservices with AWS Lambda
-              (Python) for high availability and fault tolerance.
+              Designed, created, and consumed REST APIs; documented API
+              endpoints for team use. Wrote and optimized SQL queries for
+              PostgreSQL schemas and queries for scalable backend systems,
+              improving load time by 30%.
             </li>
             <li>
               Built robust backend systems with Node.js, integrating APIs
@@ -67,8 +113,9 @@ export function TimelineDemo() {
               integration.
             </li>
             <li>
-              Collaborated with cross-functional teams to resolve technical
-              issues through code reviews, unit testing, and debugging.
+              Practiced Agile development within a cross-functional team,
+              focusing on high-quality code, unit testing, and code reviews.
+              Participated in CI/CD workflows and cloud deployments using AWS.
             </li>
           </ul>
         </div>
@@ -131,13 +178,17 @@ export function TimelineDemo() {
           </p>
           <ul className="text-neutral-600 dark:text-neutral-400 text-xs md:text-sm list-disc list-inside space-y-2 leading-relaxed">
             <li>
-              Developed a full-stack job search platform using React.js,
-              Flutter, and Node.js, focusing on responsive front-end design and
-              performance optimization.
+              Developed web applications using HTML, CSS, and JavaScript. Built
+              RESTful APIs and integrated them with frontend for seamless data
+              flow
             </li>
             <li>
               Integrated RESTful services to improve application reliability and
               data flow.
+            </li>
+            <li>
+              Focused on frontend performance optimization and seamless UX for
+              real-time job filtering and listing.
             </li>
           </ul>
         </div>
