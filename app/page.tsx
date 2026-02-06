@@ -24,7 +24,7 @@ export default function Home() {
   }, [y]);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -63,7 +63,7 @@ export default function Home() {
               </p>
               <div className="!pointer-events-auto">
                 <a
-                  href="/DevarshiAPatel_ResumeSDE.pdf"
+                  href="/DevarshiPatel_FullStackSWE.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   download={"Devarshi's Resume"}

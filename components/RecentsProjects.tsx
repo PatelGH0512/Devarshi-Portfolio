@@ -6,38 +6,38 @@ export function GlowingEffectDemo() {
   const projects = [
     {
       id: 1,
+      title: "Stocklabs",
+      des: "A modern stock intelligence platform to search, track, and get alerted on equities. StockLabs combines real‑time quotes, watchlists, AI‑summarized news, portfolio analytics, and price alerts delivered via email.",
+      iconLists: ["/next.svg", "/tail.svg", "/javascript.svg", "/redux.svg"],
+      link: "https://github.com/PatelGH0512/stocklabs",
+    },
+    {
+      id: 2,
+      title: "Dieseas Detection using xRAY  ",
+      des: "Created a Convolutional Neural Network which will be able to detect and classify human diseases (i.e. Pneumonia, Covid-19, Tuberculosis) from chest x-ray images. Also make use of different layers and other hyperparameters for building, training and testing this classification model by using tensorflow and keras for this project.",
+      iconLists: ["python.svg", "/numpy.svg", "/tensorflow.svg"],
+      link: "https://blogs.gwu.edu/patel-patel/2024/03/28/diseases-detection-using-x-ray-images/",
+    },
+    {
+      id: 3,
       title: "ProjectFlow",
       des: "A modern project management platform designed for teams to plan, track, and deliver work efficiently.",
       iconLists: ["/next.svg", "/tail.svg", "/redux.svg", "/aws.svg"],
       link: "https://github.com/PatelGH0512/projectflow",
     },
     {
-      id: 2,
+      id: 4,
       title: "InventSync",
       des: "Full Stack Inventory Mangment using AWS Service",
       iconLists: ["/next.svg", "/node.svg", "/redux.svg", "/aws.svg"],
       link: "https://github.com/PatelGH0512/inventSync",
     },
     {
-      id: 3,
-      title: "Quickmart",
-      des: "A Full stack Ecommerce grocery selling platform",
-      iconLists: ["/html.svg", "/css.svg", "/javascript.svg", "/tail.svg"],
-      link: "https://github.com/PatelGH0512/quickmart",
-    },
-    {
-      id: 4,
+      id: 5,
       title: "Budgetwise",
       des: "Budgetwise is a money management app which allows users to split income into customizable categories of need, expenses and savings.",
       iconLists: ["dart.svg", "python.svg"],
       link: "https://github.com/PatelGH0512/Dart-Project",
-    },
-    {
-      id: 5,
-      title: "Dieseas Detection using xRAY  ",
-      des: "Created a Convolutional Neural Network which will be able to detect and classify human diseases (i.e. Pneumonia, Covid-19, Tuberculosis) from chest x-ray images. Also make use of different layers and other hyperparameters for building, training and testing this classification model by using tensorflow and keras for this project.",
-      iconLists: ["python.svg", "/numpy.svg", "/tensorflow.svg"],
-      link: "https://blogs.gwu.edu/patel-patel/2024/03/28/diseases-detection-using-x-ray-images/",
     },
     {
       id: 6,
@@ -183,7 +183,8 @@ const RecentsProjects = () => {
         .project-card-outer:hover .project-glow {
           opacity: 1;
           filter: brightness(1.2);
-          box-shadow: 0 0 20px rgba(138, 43, 226, 0.3),
+          box-shadow:
+            0 0 20px rgba(138, 43, 226, 0.3),
             inset 0 0 30px rgba(138, 43, 226, 0.15);
         }
 
@@ -193,7 +194,8 @@ const RecentsProjects = () => {
 
         .project-card-outer:hover .project-inner-card {
           border-color: rgba(255, 255, 255, 0.5);
-          box-shadow: 0 0 15px rgba(255, 255, 255, 0.2),
+          box-shadow:
+            0 0 15px rgba(255, 255, 255, 0.2),
             inset 0 0 8px rgba(255, 255, 255, 0.1);
         }
 
@@ -211,15 +213,18 @@ const RecentsProjects = () => {
 
         @keyframes borderGlow {
           0% {
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
+            box-shadow:
+              0 0 10px rgba(255, 255, 255, 0.3),
               inset 0 0 5px rgba(255, 255, 255, 0.1);
           }
           50% {
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+            box-shadow:
+              0 0 20px rgba(255, 255, 255, 0.5),
               inset 0 0 10px rgba(255, 255, 255, 0.2);
           }
           100% {
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
+            box-shadow:
+              0 0 10px rgba(255, 255, 255, 0.3),
               inset 0 0 5px rgba(255, 255, 255, 0.1);
           }
         }

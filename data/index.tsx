@@ -54,23 +54,36 @@ export function TimelineDemo() {
           </p>
           <ul className="text-neutral-600 dark:text-neutral-400 text-xs md:text-sm list-disc list-inside space-y-2 leading-relaxed">
             <li>
-              Developed and optimized cross-platform mobile app features using
-              React Native, TypeScript, JavaScript, and Firebase to ensure high
-              performance and scalability, improving load times by an estimated
-              20%.
+              Architected a full-stack, community-focused platform using React,
+              Node.js, and C# to connect 1,100+ learners and volunteers, owning
+              the pipeline from design to AWS deployment. By optimising the
+              cloud infrastructure, I reduced application load times by 20%,
+              ensuring that users with limited hardware could reliably access
+              language exchange resources.
             </li>
             <li>
-              Debugged, tested, and troubleshot code using Android Studio
-              profiling tools, enhancing app stability and user experience.
+              Engineered the Python-driven inference flows for culturally
+              responsive teaching tools, including real-time grammar correction
+              and translation features for the 6 most common languages in
+              Oregon. This "AI brain" allows immigrants and refugees to practise
+              English through real-world modules, such as citizenship and
+              driving test preparation, in an interactive environment.
             </li>
             <li>
-              Collaborated with UI/UX designers and developers in agile sprints,
-              ensuring design consistency and meeting project milestones.
+              Led Figma-to-production workflows to build a "linguistically
+              responsive" UI, specifically polishing typography and motion for
+              better accessibility across diverse language scripts. This
+              collaboration ensured that learners, regardless of their native
+              language, could intuitively navigate the messaging and educational
+              features of the app.
             </li>
             <li>
-              Integrated front-end components with backend services via FireCMS
-              and Firebase for real-time data management and improving seamless
-              user interactions speed by 25%.
+              Integrated FireCMS and Firebase to manage real-time data for the
+              app&apos;s messaging and quiz modules, resulting in a 25%
+              performance boost. This technical implementation allows learners
+              to communicate seamlessly with staff and receive instant feedback
+              on their practice modules, directly addressing their immediate
+              educational needs.
             </li>
           </ul>
         </div>
@@ -97,25 +110,40 @@ export function TimelineDemo() {
           </p>
           <ul className="text-neutral-600 dark:text-neutral-400 text-xs md:text-sm list-disc list-inside space-y-2 leading-relaxed">
             <li>
-              Collaborated within a cross-functional Agile team to build and
-              maintain SPAs using React Native and Node.js, driving 20%
-              improvement in user onboarding speed.
+              Architected a high-performance React Native (TypeScript) mobile
+              interface to serve as the primary controller for "Plug-and-Fly"
+              drones, solving the bottleneck of device fragmentation across
+              Android and iOS. This unified codebase allowed for a consistent
+              pilot experience and reduced cross-platform development overhead
+              by 30%.
             </li>
             <li>
-              Designed, created, and consumed REST APIs; documented API
-              endpoints for team use. Wrote and optimized SQL queries for
-              PostgreSQL schemas and queries for scalable backend systems,
-              improving load time by 30%.
+              Led the Figma-to-production workflow to build responsive,
+              low-latency telemetry dashboards. By translating complex flight
+              data requirements into pixel-perfect TypeScript components, I
+              delivered a 25% faster user interaction speed, which is critical
+              for real-time drone monitoring and control.
             </li>
             <li>
-              Built robust backend systems with Node.js, integrating APIs
-              (Stripe, AWS Cognito, Firebase) for security and seamless
-              integration.
+              Overhauled the pilot registration pipeline by integrating AWS
+              Cognito and Node.js microservices. By streamlining the
+              authentication and third-party API data flow, I slashed user
+              onboarding time by 20%, allowing customers to go from unboxing to
+              their first flight significantly faster
             </li>
             <li>
-              Practiced Agile development within a cross-functional team,
-              focusing on high-quality code, unit testing, and code reviews.
-              Participated in CI/CD workflows and cloud deployments using AWS.
+              Maintained a multi-tier MVC web-based fleet management platform,
+              using object-oriented principles to manage drone telemetry data. I
+              personally resolved over 30 critical technical bugs with 98% code
+              efficiency, ensuring the platform remained stable during
+              high-concurrency flight windows.
+            </li>
+            <li>
+              Partnered with the hardware and firmware teams to lead code
+              reviews and unit testing for the companion app. By establishing a
+              rigorous CI/CD workflow on AWS, we reduced post-deployment bugs by
+              40%, preventing critical software failures during live drone
+              operations.
             </li>
           </ul>
         </div>
