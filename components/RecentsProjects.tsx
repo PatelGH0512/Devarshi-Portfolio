@@ -28,7 +28,7 @@ export function GlowingEffectDemo() {
         "/javascript.svg",
         "/git.svg",
       ],
-      link: "https://github.com/PatelGH0512/projectflow",
+      link: "https://github.com/PatelGH0512/acquisitions",
     },
     {
       id: 4,
