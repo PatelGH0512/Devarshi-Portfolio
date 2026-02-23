@@ -20,18 +20,24 @@ export function GlowingEffectDemo() {
     },
     {
       id: 3,
+      title: "Build a production-ready API",
+      des: "A Node.js (ESM) Express REST API that demonstrates a production-style backend setup.",
+      iconLists: [
+        "/node.svg",
+        "/PostgresSQL.svg",
+        "/javascript.svg",
+        "/git.svg",
+      ],
+      link: "https://github.com/PatelGH0512/projectflow",
+    },
+    {
+      id: 4,
       title: "ProjectFlow",
       des: "A modern project management platform designed for teams to plan, track, and deliver work efficiently.",
       iconLists: ["/next.svg", "/tail.svg", "/redux.svg", "/aws.svg"],
       link: "https://github.com/PatelGH0512/projectflow",
     },
-    {
-      id: 4,
-      title: "InventSync",
-      des: "Full Stack Inventory Mangment using AWS Service",
-      iconLists: ["/next.svg", "/node.svg", "/redux.svg", "/aws.svg"],
-      link: "https://github.com/PatelGH0512/inventSync",
-    },
+
     {
       id: 5,
       title: "Budgetwise",
