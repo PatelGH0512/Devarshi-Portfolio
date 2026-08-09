@@ -61,8 +61,8 @@ export default function TechStack() {
       items: [
         { name: "JavaScript", level: 90, logo: <IoLogoJavascript size={25} /> },
         { name: "Python", level: 80, logo: <FaPython size={25} /> },
-        { name: "", level: 75, logo: <TbBrandCSharp size={25} /> },
-        { name: "", level: 65, logo: <TbBrandCpp size={25} /> },
+        { name: "C#", level: 75, logo: <TbBrandCSharp size={25} /> },
+        { name: "C++", level: 65, logo: <TbBrandCpp size={25} /> },
         { name: "Java", level: 65, logo: <FaJava size={25} /> },
         { name: "TypeScript", level: 85, logo: <SiTypescript size={25} /> },
       ],

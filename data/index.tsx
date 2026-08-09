@@ -34,7 +34,54 @@ export const gridItems = [
 export function TimelineDemo() {
   const data = [
     {
-      title: "July'25 - Present",
+      title: "Jul 2026 - Present",
+      content: (
+        <div>
+          <div className="flex items-center gap-3 mb-2">
+            <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-semibold">
+              Bits and Binaries Inc
+            </p>
+          </div>
+          <p className="text-neutral-600 dark:text-neutral-400 text-xs md:text-sm mb-2">
+            Full Stack Developer
+          </p>
+          <ul className="text-neutral-600 dark:text-neutral-400 text-xs md:text-sm list-disc list-inside space-y-2 leading-relaxed">
+            <li>
+              Joined the modernization of a client&apos;s legacy monolithic
+              platform into AWS serverless microservices (Lambda, API Gateway,
+              SQS/SNS, RDS), focused on reducing system coupling and
+              eliminating single points of failure.
+            </li>
+            <li>
+              Redesigned fragmented legacy client interfaces into modular,
+              responsive TypeScript frontends using modern state management
+              and reactive design patterns, streamlining complex operational
+              workflows and improving platform engagement.
+            </li>
+            <li>
+              Integrated custom AI-assisted development tooling and LLM
+              workflows into client engineering pipelines to accelerate legacy
+              code reverse-engineering, automate unit test generation, and
+              reduce post-deployment bugs by 35%.
+            </li>
+            <li>
+              Re-architected multi-tenant client data layers by combining
+              relational schemas (PostgreSQL) and NoSQL stores
+              (DynamoDB/Firestore) with real-time event streams, resolving
+              data latency bottlenecks and improving API query performance.
+            </li>
+            <li>
+              Formulated containerised CI/CD deployment pipelines (Docker,
+              GitHub Actions/Jenkins) and end-to-end testing strategies,
+              guaranteeing significant uptime during critical client migration
+              phases and cutting onboarding/deployment cycles.
+            </li>
+          </ul>
+        </div>
+      ),
+    },
+    {
+      title: "Jul 2024 - Jun 2026",
       content: (
         <div>
           <div className="flex items-center gap-3 mb-2">
@@ -46,51 +93,56 @@ export function TimelineDemo() {
               className="rounded-full"
             />
             <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-semibold">
-              Torus Transforms - Portland, Oregon
+              Torus Transforms - Remote
             </p>
           </div>
           <p className="text-neutral-600 dark:text-neutral-400 text-xs md:text-sm mb-2">
-            Mobile Application Developer
+            Full Stack Engineer
           </p>
           <ul className="text-neutral-600 dark:text-neutral-400 text-xs md:text-sm list-disc list-inside space-y-2 leading-relaxed">
             <li>
-              Architected a full-stack, community-focused platform using React,
-              Node.js, and C# to connect 1,100+ learners and volunteers, owning
-              the pipeline from design to AWS deployment. By optimising the
-              cloud infrastructure, I reduced application load times by 20%,
-              ensuring that users with limited hardware could reliably access
-              language exchange resources.
+              Architected and led development of a cross-platform solution
+              using React, Node.js, and React Native (TypeScript), migrating
+              1,100+ Torus users from manual coordination to a unified
+              real-time platform hosted on AWS EC2, S3, and RDS with Firebase
+              for data sync.
             </li>
             <li>
-              Engineered the Python-driven inference flows for culturally
-              responsive teaching tools, including real-time grammar correction
-              and translation features for the 6 most common languages in
-              Oregon. This "AI brain" allows immigrants and refugees to practise
-              English through real-world modules, such as citizenship and
-              driving test preparation, in an interactive environment.
+              Designed and implemented a server-side volunteer-learner
+              matching engine in Node.js that scores compatibility across
+              language background and weekly availability, exposing results
+              via a REST API consumed by both the mobile and web clients;
+              automated a previously fully manual staff workflow and
+              measurably increased successful session booking rates.
             </li>
             <li>
-              Led Figma-to-production workflows to build a "linguistically
-              responsive" UI, specifically polishing typography and motion for
-              better accessibility across diverse language scripts. This
-              collaboration ensured that learners, regardless of their native
-              language, could intuitively navigate the messaging and educational
-              features of the app.
+              Built a real-time in-app messaging module using Firestore&apos;s
+              WebSocket-based listeners to replace fragmented WhatsApp threads
+              with a structured communication layer between learners,
+              volunteer facilitators, and Torus staff, reducing message
+              latency and giving staff full visibility into session
+              coordination from the admin dashboard.
             </li>
             <li>
-              Integrated FireCMS and Firebase to manage real-time data for the
-              app&apos;s messaging and quiz modules, resulting in a 25%
-              performance boost. This technical implementation allows learners
-              to communicate seamlessly with staff and receive instant feedback
-              on their practice modules, directly addressing their immediate
-              educational needs.
+              Integrated OpenAI and Gemini APIs into a Node.js middleware
+              layer to deliver real-time grammar correction and multilingual
+              translation across six languages, handling prompt engineering,
+              response streaming, and error fallback logic to ensure reliable
+              in-app feedback for ESL learners.
+            </li>
+            <li>
+              Developed curriculum-aligned quiz modules in React Native with
+              per-learner progress tracking stored in Firestore, surfaced
+              aggregated learner analytics on the React admin dashboard,
+              giving volunteer facilitators actionable visibility into student
+              progress between sessions.
             </li>
           </ul>
         </div>
       ),
     },
     {
-      title: "September'22 - June'23",
+      title: "Nov 2021 - Jun 2023",
       content: (
         <div>
           <div className="flex items-center gap-3 mb-2">
@@ -110,40 +162,38 @@ export function TimelineDemo() {
           </p>
           <ul className="text-neutral-600 dark:text-neutral-400 text-xs md:text-sm list-disc list-inside space-y-2 leading-relaxed">
             <li>
-              Architected a high-performance React Native (TypeScript) mobile
-              interface to serve as the primary controller for "Plug-and-Fly"
-              drones, solving the bottleneck of device fragmentation across
-              Android and iOS. This unified codebase allowed for a consistent
-              pilot experience and reduced cross-platform development overhead
-              by 30%.
-            </li>
-            <li>
-              Led the Figma-to-production workflow to build responsive,
-              low-latency telemetry dashboards. By translating complex flight
-              data requirements into pixel-perfect TypeScript components, I
-              delivered a 25% faster user interaction speed, which is critical
-              for real-time drone monitoring and control.
+              Architected a React Native (TypeScript) mobile interface that
+              serves as the primary controller for Plug-and-Fly drones,
+              eliminating device fragmentation across Android and iOS and
+              reducing support tickets.
             </li>
             <li>
               Overhauled the pilot registration pipeline by integrating AWS
-              Cognito and Node.js microservices. By streamlining the
-              authentication and third-party API data flow, I slashed user
-              onboarding time by 20%, allowing customers to go from unboxing to
-              their first flight significantly faster
+              Cognito and Node.js microservices, streamlining authentication
+              and third-party API data flow, and slashing user onboarding
+              time by 20%, allowing customers to go from unboxing to their
+              first flight faster.
             </li>
             <li>
-              Maintained a multi-tier MVC web-based fleet management platform,
-              using object-oriented principles to manage drone telemetry data. I
-              personally resolved over 30 critical technical bugs with 98% code
-              efficiency, ensuring the platform remained stable during
+              Maintained a multi-tier MVC web-based fleet management platform
+              using object-oriented principles to handle drone telemetry
+              data, resolved over 30 critical bugs and achieved 98% code
+              efficiency, which kept the platform stable during
               high-concurrency flight windows.
             </li>
             <li>
               Partnered with the hardware and firmware teams to lead code
-              reviews and unit testing for the companion app. By establishing a
-              rigorous CI/CD workflow on AWS, we reduced post-deployment bugs by
-              40%, preventing critical software failures during live drone
-              operations.
+              reviews and unit testing for the companion app. By establishing
+              a rigorous CI/CD workflow on AWS, we reduced post-deployment
+              bugs by 40%, preventing critical software failures during live
+              drone operations.
+            </li>
+            <li>
+              Extended the fleet management platform with React and Tailwind
+              CSS to visualise real-time diagnostics, battery health, signal
+              strength, and flight anomalies across defence and agriculture
+              product lines, enabling operators to identify issues about 30%
+              faster.
             </li>
           </ul>
         </div>

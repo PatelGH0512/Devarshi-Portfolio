@@ -6,20 +6,27 @@ export function GlowingEffectDemo() {
   const projects = [
     {
       id: 1,
+      title: "Scriva - AI Thinking Workspace",
+      des: "A full-stack, three-panel workspace that solves the context-loss problem by merging live AI chat with a structured BlockNote document editor. Features a real-time streaming AI pipeline (Claude & Gemini via the Vercel AI SDK) that parses streamed text directly into editable block editor JSON, PostgreSQL Row Level Security via Clerk webhooks, and clean DOCX/PDF export.",
+      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/PostgresSQL.svg"],
+      link: "https://github.com/PatelGH0512/Scriva",
+    },
+    {
+      id: 2,
       title: "Stocklabs",
       des: "A modern stock intelligence platform to search, track, and get alerted on equities. StockLabs combines real‑time quotes, watchlists, AI‑summarized news, portfolio analytics, and price alerts delivered via email.",
       iconLists: ["/next.svg", "/tail.svg", "/javascript.svg", "/redux.svg"],
       link: "https://github.com/PatelGH0512/stocklabs",
     },
     {
-      id: 2,
+      id: 3,
       title: "Dieseas Detection using xRAY  ",
       des: "Created a Convolutional Neural Network which will be able to detect and classify human diseases (i.e. Pneumonia, Covid-19, Tuberculosis) from chest x-ray images. Also make use of different layers and other hyperparameters for building, training and testing this classification model by using tensorflow and keras for this project.",
       iconLists: ["python.svg", "/numpy.svg", "/tensorflow.svg"],
       link: "https://blogs.gwu.edu/patel-patel/2024/03/28/diseases-detection-using-x-ray-images/",
     },
     {
-      id: 3,
+      id: 4,
       title: "Build a production-ready API",
       des: "A Node.js (ESM) Express REST API that demonstrates a production-style backend setup.",
       iconLists: [
@@ -31,7 +38,7 @@ export function GlowingEffectDemo() {
       link: "https://github.com/PatelGH0512/acquisitions",
     },
     {
-      id: 4,
+      id: 5,
       title: "ProjectFlow",
       des: "A modern project management platform designed for teams to plan, track, and deliver work efficiently.",
       iconLists: ["/next.svg", "/tail.svg", "/redux.svg", "/aws.svg"],
@@ -39,14 +46,14 @@ export function GlowingEffectDemo() {
     },
 
     {
-      id: 5,
+      id: 6,
       title: "Budgetwise",
       des: "Budgetwise is a money management app which allows users to split income into customizable categories of need, expenses and savings.",
       iconLists: ["dart.svg", "python.svg"],
       link: "https://github.com/PatelGH0512/Dart-Project",
     },
     {
-      id: 6,
+      id: 7,
       title: "Devarshi's Portfolio",
       des: "Full Stack Portfolio using Acetenity UI components",
       iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/fm.svg"],
