@@ -42,3 +42,8 @@ next-env.d.ts
 
 # Sentry Config File
 .env.sentry-build-plugin
+
+# local tooling / agent config
+.claude/
+.agents/
+skills-lock.json
