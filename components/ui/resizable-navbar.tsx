@@ -225,18 +225,38 @@ export const MobileNavToggle = ({
   isOpen: boolean;
   onClick: () => void;
 }) => {
-  return isOpen ? (
-    <IconX
-      className="text-zinc-800 dark:text-zinc-200 transition-colors duration-200"
+  return (
+    <button
       onClick={onClick}
-      size={24}
-    />
-  ) : (
-    <IconMenu2
-      className="text-zinc-800 dark:text-zinc-200 transition-colors duration-200"
-      onClick={onClick}
-      size={24}
-    />
+      aria-label={isOpen ? "Close menu" : "Open menu"}
+      className="relative grid place-items-center h-8 w-8 active:scale-90 transition-transform duration-100"
+    >
+      <AnimatePresence mode="popLayout" initial={false}>
+        {isOpen ? (
+          <motion.span
+            key="close"
+            className="absolute inset-0 grid place-items-center text-zinc-800 dark:text-zinc-200"
+            initial={{ opacity: 0, rotate: -90 }}
+            animate={{ opacity: 1, rotate: 0 }}
+            exit={{ opacity: 0, rotate: 90 }}
+            transition={{ type: "spring", bounce: 0, duration: 0.25 }}
+          >
+            <IconX size={24} />
+          </motion.span>
+        ) : (
+          <motion.span
+            key="menu"
+            className="absolute inset-0 grid place-items-center text-zinc-800 dark:text-zinc-200"
+            initial={{ opacity: 0, rotate: 90 }}
+            animate={{ opacity: 1, rotate: 0 }}
+            exit={{ opacity: 0, rotate: -90 }}
+            transition={{ type: "spring", bounce: 0, duration: 0.25 }}
+          >
+            <IconMenu2 size={24} />
+          </motion.span>
+        )}
+      </AnimatePresence>
+    </button>
   );
 };
 
@@ -284,7 +304,7 @@ export const NavbarButton = ({
   | React.ComponentPropsWithoutRef<"button">
 )) => {
   const baseStyles =
-    "px-5 py-2 rounded-xl font-medium text-sm relative cursor-pointer transition duration-300 ease-out inline-block text-center";
+    "px-5 py-2 rounded-xl font-medium text-sm relative cursor-pointer transition duration-300 ease-out inline-block text-center active:scale-95";
 
   const variantStyles = {
     primary:
