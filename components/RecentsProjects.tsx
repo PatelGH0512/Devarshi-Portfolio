@@ -150,7 +150,7 @@ const GridItem = ({
               <div className="mt-4 opacity-60 group-hover:opacity-100 transition-all duration-300">
                 <div className="flex justify-end mt-4">
                   <a href={link}>
-                    <button className="px-4 py-2 rounded-lg flex items-center group-hover:bg-purple-900/30 transition-all duration-300">
+                    <button className="px-4 py-2 rounded-lg flex items-center group-hover:bg-purple-900/30 transition-all duration-300 active:scale-95">
                       View Project
                       <FaLocationArrow className="ml-2" color="#CBACF9" />
                     </button>

@@ -29,7 +29,7 @@ const Hero = () => {
 
       {/* Hero Text */}
       <div className="relative z-20 flex flex-col items-center justify-center mx-auto px-4 text-center space-y-10 max-w-4xl">
-        <h1 className="text-center uppercase tracking-widest font-bold text-4xl md:text-6xl lg:text-7xl">
+        <h1 className="text-center uppercase tracking-wide md:tracking-normal lg:tracking-tight font-bold text-4xl md:text-6xl lg:text-7xl">
           Hello, I am <br />
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-900 via-purple-400 to-pink-700">
             Devarshi Patel

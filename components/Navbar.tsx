@@ -42,7 +42,7 @@ export function NavbarDemo() {
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
             <a href="#contact">
-              <button className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-lg leading-6 text-white inline-block">
+              <button className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-lg leading-6 text-white inline-block transition-transform duration-100 active:scale-95">
                 <span className="absolute inset-0 overflow-hidden rounded-full">
                   <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(circle_at_top_left,rgba(255,255,255,0.05),transparent),radial-gradient(circle_at_top_right,rgba(255,168,255,0.07),transparent),linear-gradient(135deg,#090025_0%,#1c0049_50%,#140117_100%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 </span>

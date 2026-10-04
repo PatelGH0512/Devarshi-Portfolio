@@ -1,7 +1,8 @@
-import { useState, ChangeEvent, FormEvent, useMemo } from "react";
+import { useState, useEffect, ChangeEvent, FormEvent, useMemo } from "react";
 import { FaEnvelope, FaTimes, FaPaperPlane } from "react-icons/fa";
 import { socialMedia } from "@/data";
 import emailjs from "@emailjs/browser";
+import { AnimatePresence, motion } from "motion/react";
 
 interface FormData {
   name: string;
@@ -22,6 +23,15 @@ const Footer = () => {
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const currentYear = useMemo(() => new Date().getFullYear(), []);
+
+  useEffect(() => {
+    if (!isFormOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsFormOpen(false);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isFormOpen]);
 
   const handleInputChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -85,7 +95,7 @@ const Footer = () => {
 
             <button
               onClick={() => setIsFormOpen(true)}
-              className="relative flex items-center gap-3 bg-gradient-to-r from-purple-500 to-indigo-600 py-3 px-8 rounded-full text-white font-medium transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/30 group-hover:translate-y-1"
+              className="relative flex items-center gap-3 bg-gradient-to-r from-purple-500 to-indigo-600 py-3 px-8 rounded-full text-white font-medium transition-all duration-300 active:scale-95 hover:shadow-lg hover:shadow-purple-500/30 group-hover:translate-y-1"
             >
               <span>Start a conversation</span>
               <FaEnvelope
@@ -116,7 +126,7 @@ const Footer = () => {
               <a
                 key={info.id}
                 href={info.link}
-                className="group w-10 h-10 flex justify-center items-center rounded-lg bg-purple-500/10 backdrop-blur-md border border-white/10 transition-all duration-300 hover:border-purple-500/50 hover:bg-black-200 hover:scale-110"
+                className="group w-10 h-10 flex justify-center items-center rounded-lg bg-purple-500/10 backdrop-blur-md border border-white/10 transition-all duration-300 hover:border-purple-500/50 hover:bg-black-200 hover:scale-110 active:scale-95"
               >
                 <img
                   src={info.img}
@@ -130,12 +140,27 @@ const Footer = () => {
       </div>
 
       {/* Contact Form Modal */}
-      {isFormOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/70 backdrop-blur-sm transition-all">
-          <div className="relative w-full max-w-md p-6 rounded-2xl shadow-xl bg-gradient-to-br from-black-300 to-black-200 border border-white/10">
+      <AnimatePresence>
+        {isFormOpen && (
+          <motion.div
+            className="fixed inset-0 flex items-center justify-center z-50 bg-black/70 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            onClick={() => setIsFormOpen(false)}
+          >
+          <motion.div
+            className="relative w-full max-w-md p-6 rounded-2xl shadow-xl bg-gradient-to-br from-black-300 to-black-200 border border-white/10"
+            onClick={(e) => e.stopPropagation()}
+            initial={{ opacity: 0, scale: 0.92, y: 12 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 8 }}
+            transition={{ type: "spring", bounce: 0, duration: 0.4 }}
+          >
             <button
               onClick={() => setIsFormOpen(false)}
-              className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
+              className="absolute top-4 right-4 text-white/70 hover:text-white active:scale-90 transition-all"
               aria-label="Close contact form"
             >
               <FaTimes />
@@ -228,7 +253,7 @@ const Footer = () => {
                   className={`w-full py-3 px-6 rounded-lg font-medium transition-all ${
                     isSubmitting
                       ? "bg-purple-700/50 cursor-not-allowed"
-                      : "bg-gradient-to-r from-purple-500 to-indigo-600 hover:shadow-lg hover:shadow-purple-500/30"
+                      : "bg-gradient-to-r from-purple-500 to-indigo-600 hover:shadow-lg hover:shadow-purple-500/30 active:scale-[0.97]"
                   } text-white flex items-center justify-center gap-2`}
                 >
                   {isSubmitting ? (
@@ -245,9 +270,10 @@ const Footer = () => {
                 </button>
               </form>
             )}
-          </div>
-        </div>
-      )}
+          </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </footer>
   );
 };
